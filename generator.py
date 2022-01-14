@@ -3,6 +3,9 @@ import bash_checker
 
 
 def main():
+    real_path = os.path.realpath(__file__)
+    dir_path = os.path.dirname(real_path)
+    os.chdir(dir_path)
     os.chdir('..')
     os.system('cls' if os.name == 'nt' else 'clear')
     name = input('What is the name of the project?\n>>> ')
